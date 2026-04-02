@@ -5,3 +5,27 @@ description = "Prasaarit transcoder service"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+]
+lint = [
+    "bandit>=1.9.4",
+    "black>=26.3.1",
+    "flake8>=7.3.0",
+    "flake8-pyproject>=1.2.4",
+    "isort>=8.0.1",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
