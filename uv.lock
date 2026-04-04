@@ -96,6 +96,15 @@ wheels = [
 ]
 
 [[package]]
+name = "ffprobe-python"
+version = "1.0.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/84/c11f4c6fa238c8844c6bf4af80f33b25772e6444bde133d6f4fb4a283e4e/ffprobe-python-1.0.3.tar.gz", hash = "sha256:b1d3e69e65e0814e28575f63a47b836a0b7cc8f1ffedd62d27152d9e4488214a", size = 4257, upload-time = "2019-11-05T04:02:25.917Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8c/54/5b8c859cc1aea972f98c08c36d99f1bb0bd77109464666ac613b4ae69895/ffprobe_python-1.0.3-py3-none-any.whl", hash = "sha256:b02576228f6da0b0bb973e15e5dadb132013a4ded202dabb89ac77779e9634d6", size = 5655, upload-time = "2019-11-05T04:02:24.473Z" },
+]
+
+[[package]]
 name = "filelock"
 version = "3.25.2"
 source = { registry = "https://pypi.org/simple" }
@@ -237,6 +246,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ffmpeg-python" },
+    { name = "ffprobe-python" },
 ]
 
 [package.dev-dependencies]
@@ -252,7 +262,10 @@ lint = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ffmpeg-python", specifier = ">=0.2.0" }]
+requires-dist = [
+    { name = "ffmpeg-python", specifier = ">=0.2.0" },
+    { name = "ffprobe-python", specifier = ">=1.0.3" },
+]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pre-commit", specifier = ">=4.5.1" }]
